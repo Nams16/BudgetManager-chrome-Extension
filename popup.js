@@ -1,9 +1,10 @@
+//Spend is not lost
 $(function(){
     chrome.storage.sync.get(['total','limit'],function(budget){
         $('#total').text(budget.total);
         $('#limit').text(budget.limit);
     });
-
+//Setting the spend
     $('#SpendAmount').click(function(){
      chrome.storage.sync.get(['total','limit'],function(budget){
          var newTotal = 0;
