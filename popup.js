@@ -14,6 +14,7 @@ $(function(){
          if(amount){
              newTotal += parseInt(amount);
          }
+         //Updating
          chrome.storage.sync.set({"total": newTotal},function(){
              if(amount && newTotal >= budget.limit){
                  var notifOptions = {
